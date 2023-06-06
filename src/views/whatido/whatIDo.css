@@ -1,0 +1,98 @@
+@import "../../../styles/base/_settings.css";
+@import "../../../styles/utils/_helpers.css";
+
+/* Collapsible Container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+  position: relative;
+  margin-bottom: var(--spacer);
+
+  @media (--above-tablet) {
+    padding: var(--spacer) var(--spacer-sm);
+    overflow: hidden;
+
+    &::before {
+      position: absolute 0 null 0 50%;
+      transform: translateX(-50%);
+      margin: var(--spacer) 0;
+      background: var(--grey-lighten);
+      width: 1Px;
+      content: "";
+    }
+
+    &::after {
+      border: 1px solid var(--grey-lighten);
+      border-radius: 50%;
+      background: #fff;
+      width: 12px;
+      height: 12px;
+      content: "";
+
+      @apply --center-xy;
+    }
+  }
+}
+
+/* left and right side of the container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.left,
+.right {
+  @media (--above-tablet) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.left {
+  @media (--above-tablet) {
+    padding-right: var(--spacer-md);
+  }
+}
+
+.right {
+  @media (--above-tablet) {
+    padding-left: var(--spacer-md);
+  }
+}
+
+/* dividers between each 'Collapsible'
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+  & [data-divider="true"] {
+    position: relative;
+    margin-bottom: var(--spacer-xl);
+
+    &::before {
+      position: absolute null 0 -22px 0;
+      margin: 0 10em;
+      background-color: var(--grey-lighten);
+      height: 1Px;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid var(--grey-lighten);
+      border-radius: 50%;
+      background: #fff;
+      width: 12px;
+      height: 12px;
+      content: "";
+    }
+
+    @media (--above-tablet) {
+      margin-bottom: 0;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

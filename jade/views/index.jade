@@ -1,0 +1,19 @@
+extends ../layout
+
+append config
+  - var metaDesc = 'Hello World, I am Alex L, a front-end web dev, and a human being'
+  - var title = 'Alex L'
+
+block MainContent
+  .loader
+    .loader-dots
+      span.loader-dot
+      span.loader-dot
+      span.loader-dot
+  script.
+    document.addEventListener("DOMContentLoaded", function() {
+      var body = document.querySelector('body')
+      var loader = document.querySelector('.loader')
+      body.removeChild(loader)
+    });
+  #app

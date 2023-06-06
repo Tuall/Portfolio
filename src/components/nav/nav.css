@@ -1,0 +1,135 @@
+@import "../../../styles/base/_settings.css";
+@import "../../../styles/utils/_helpers.css";
+
+.root {
+  flex: none;
+  margin-bottom: var(--spacer);
+  padding: var(--spacer-md) var(--spacer) 0;
+  text-align: center;
+  color: #fff;
+
+  @apply --box-shadow;
+}
+
+.avatar {
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #fff;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.heading {
+  margin: var(--spacer) 0 0;
+  letter-spacing: 5px;
+  color: #fff;
+  font-size: var(--text-xl);
+}
+
+.subHeading {
+  display: inline-block;
+  border-radius: 2px;
+  background: var(--accent-color);
+  padding: var(--spacer-xs) var(--spacer-sm);
+  font-family: var(--headings-font-family);
+  font-style: italic;
+}
+
+.listContainer {
+  display: none;
+  margin: var(--spacer-md) auto;
+  background-color: var(--primary-color);
+
+  @media (--above-mobile) {
+    display: block;
+  }
+}
+
+.list {
+  position: relative;
+  text-transform: uppercase;
+
+  &.isFixed {
+    position: fixed 0 0 null 0;
+    z-index: 9;
+    padding: 0 var(--spacer);
+  }
+
+  &.hasBoxshadow {
+    background-color: inherit;
+
+    @apply --box-shadow;
+  }
+
+  &:global {
+    animation: slideUp 0.7s ease-in-out-quad;
+  }
+
+  & ul {
+    margin: 0 auto;
+    max-width: 1280px;
+    box: horizontal-left wrap;
+  }
+
+  & li {
+    box: horizontal-middle center wrap;
+    flex: 0 1 auto;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &.isActive {
+      background: color(var(--primary-color) shade(10%));
+    }
+
+    @media (--above-mobile) {
+      width: 50%;
+    }
+
+    @media (--above-tablet) {
+      width: 25%;
+    }
+  }
+}
+
+.link {
+  display: block;
+  padding: var(--spacer-md) var(--spacer-md);
+  width: 100%;
+  color: #fff;
+  font-size: responsive 20px 25px;
+  font-weight: 300;
+}
+
+/* Menu Icon
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.iconContainer {
+  margin: var(--spacer-md) 0;
+  background-color: var(--primary-color);
+
+  @media (--above-mobile) {
+    display: none;
+  }
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+
+  &.isFixed {
+    position: fixed 0 0 null 0;
+    z-index: 5;
+    background-color: inherit;
+    padding: 0 var(--spacer);
+  }
+
+  &.hasBoxshadow {
+    @apply --box-shadow;
+  }
+
+  & > div {
+    animation: slideLeft 0.35s ease-out-back;
+    vertical-align: middle;
+  }
+}

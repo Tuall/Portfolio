@@ -1,0 +1,68 @@
+@keyframes :global(slideLeft) {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes :global(slideUp) {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(beatingHeart) {
+  50% {
+    transform: scale(1.01);
+  }
+
+  75% {
+    transform: scale(0.99);
+  }
+}
+
+@keyframes :global(beatingHeartStronger) {
+  50% {
+    transform: scale(1.02);
+  }
+
+  75% {
+    transform: scale(0.97);
+  }
+}
+
+@keyframes :global(landing) {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateY(-75%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes :global(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

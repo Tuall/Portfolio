@@ -1,0 +1,11 @@
+:global #app,
+:global .root,
+:global [data-reactroot] {
+  height: 100%;
+}
+
+:global .root,
+:global [data-reactroot] {
+  display: flex;
+  flex-direction: column;
+}

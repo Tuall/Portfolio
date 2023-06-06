@@ -1,0 +1,19 @@
+@import "../../../styles/base/_settings.css";
+
+.root {
+  box: horizontal-left wrap;
+}
+
+.item {
+  flex: 0 1 auto;
+  margin-bottom: var(--spacer-xl);
+  width: 100%;
+
+  @media (--above-tablet) {
+    width: calc(50% - (var(--spacer-xl) / 2));
+
+    &:nth-of-type(2n+1) {
+      margin-right: var(--spacer-xl);
+    }
+  }
+}

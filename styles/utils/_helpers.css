@@ -1,0 +1,53 @@
+:root {
+
+  --block: {
+    display: block;
+  }
+
+  --box-shadow: {
+    box-shadow:
+      0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  --highlight: {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  --link: {
+    padding-bottom: 1px;
+    border-bottom: 1px dashed var(--accent-color);
+
+    &:visited {
+      color: var(--accent-color);
+    }
+  }
+
+  --underline: {
+    display: inline-block;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  --no-scroll: {
+    position: absolute 0;
+    overflow-y: hidden;
+    height: auto;
+  }
+
+  /* Centers an element vertically */
+  --center-y: {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Centers an element both horizontally & vertically */
+  --center-xy: {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

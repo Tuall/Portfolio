@@ -1,0 +1,75 @@
+/* Custom fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: "Tofino";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Tofino-Regular.otf");
+}
+
+/* Ratios
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --minor-second: 1.067;
+  --major-second: 1.125;
+  --minor-third: 1.2;
+  --major-third: 1.25;
+  --perfect-fourth: 1.333;
+  --aug-fourth: 1.414;
+  --perfect-fifth: 1.5;
+  --minor-sixth: 1.6;
+  --golden: 1.618;
+  --major-sixth: 1.667;
+  --minor-seventh: 1.778;
+  --major-seventh: 1.875;
+  --octave: 2;
+  --major-tenth: 2.5;
+  --major-eleventh: 2.667;
+  --major-twelfth: 3;
+  --double-octave: 4;
+}
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --base-font-size: 16px;
+  --base-line-height: var(--golden);
+  --vr: calc(var(--golden) * var(--base-font-size)); /* vertical-rhythm */
+  --headings-line-height: var(--aug-fourth);
+}
+
+/* Body
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  color: var(--primary-text);
+  font-family: var(--body-font-family);
+  font-size: var(--text-regular);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--base-line-height);
+}
+
+/* Headings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headings);
+  font-family: var(--headings-font-family);
+  font-weight: 400;
+  line-height: var(--headings-line-height);
+}
+
+/* Body text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+p {
+  margin-bottom: var(--vr);
+}
+
+a:--states {
+  color: inherit;
+}

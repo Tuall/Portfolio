@@ -1,0 +1,63 @@
+@import "../../../styles/base/_settings.css";
+@import "../../../styles/utils/_custom-selectors.css";
+
+.root {
+  text-transform: uppercase;
+
+  &.isOpen {
+    & .overlay {
+      &:global {
+        animation: fadeIn ease-out-quint 0.45s forwards;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed 0;
+  transform: translateZ(0); /* trick to smooth out the animation */
+  opacity: 0;
+  z-index: 10;
+  background-color: rgba(#000, 0.54);
+}
+
+.content {
+  position: fixed 0 null null 0;
+  transform: translateX(-100%);
+  z-index: 11;
+  box-shadow: rgba(#000, 0.16) 0 3px 10px, rgba(#000, 0.23) 0 3px 10px;
+  background-color: #fff;
+  width: 240px;
+  height: 100%;
+  overflow: auto;
+}
+
+.item {
+  transition: background-color ease-out-quint 0.45s;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+
+  &:hover {
+    background-color: var(--grey-lighten);
+  }
+
+  &.isActive {
+    transition: none;
+    background-color: var(--grey);
+
+    & .link {
+      color: #fff;
+    }
+  }
+}
+
+.link {
+  display: block;
+  transition: none;
+  padding: var(--spacer-md) var(--spacer);
+
+  &:--link-color {
+    color: var(--primary-text);
+  }
+}

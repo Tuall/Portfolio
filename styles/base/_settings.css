@@ -1,0 +1,39 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  /* colors */
+  --primary-text: #333;
+  --secondary-text: color(var(--primary-text) tint(10%));
+  --headings: var(--primary-text);
+  --links: var(--primary-text);
+  --primary-color: #2196f3;
+  --accent-color: #6200ea;
+  --grey: #bdbdbd;
+  --grey-lighten: #e0e0e0;
+  --grey-lighten-2: #9e9e9e;
+  --grey-darken: #757575;
+
+  /* font stacks */
+  --body-font-family: "Roboto", "Helvetica Neue", sans-serif;
+  --headings-font-family: "Tofino", "Helvetica Neue", sans-serif;
+
+  /* font-sizes (Rucksack) */
+  --text-sm: responsive 12px 14px;
+  --text-regular: responsive 14px 16px;
+  --text-md: responsive 16px 18px;
+  --text-lg: responsive 18px 20px;
+  --text-xl: responsive 23px 25px;
+
+  /* spacings */
+  --spacer: 16px;
+  --spacer-xs: calc(var(--spacer) / 4);
+  --spacer-sm: calc(var(--spacer) / 2);
+  --spacer-md: calc(var(--spacer) * 1.5);
+  --spacer-lg: calc(var(--spacer) * 2);
+  --spacer-xl: calc(var(--spacer) * 2.5);
+}
+
+/* Media queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@custom-media --above-mobile (min-width: 480px);
+@custom-media --above-tablet (min-width: 840px);

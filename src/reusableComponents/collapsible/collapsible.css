@@ -1,0 +1,125 @@
+@import "../../../styles/base/_settings.css";
+
+.root {
+  transform: translateZ(0); /* trick to smooth out the transitions */
+  border-radius: 2px;
+  box-shadow:
+    rgba(#000, 0.117647) 0 1px 6px,
+    rgba(#000, 0.117647) 0 1px 4px;
+  overflow: hidden;
+
+  &.popOut {
+    transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 0 var(--spacer-md);
+
+    &.isOpen {
+      margin: var(--spacer) 0;
+      box-shadow:
+        0 5px 11px 0 rgba(#000, 0.18),
+        0 4px 15px 0 rgba(#000, 0.15);
+    }
+  }
+
+  &:not(.popOut) {
+    & ul {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  cursor: pointer;
+  padding: var(--spacer);
+  box: horizontal-middle center wrap;
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    & .expandIcon::after {
+      transform: scale(1);
+    }
+  }
+}
+
+.titleLeft {
+  flex: 1 0 80%;
+
+  & .icon {
+    margin-right: var(--spacer);
+    vertical-align: middle;
+  }
+
+  & .text {
+    vertical-align: middle;
+    color: var(--grey-darken);
+    font-size: var(--text-lg);
+  }
+}
+
+.titleRight {
+  box: horizontal-right wrap;
+  flex: 0 0 20%;
+}
+
+.expandIcon {
+  position: relative;
+  padding: 3.2px;
+
+  &.isOpen {
+    transform: scaleY(-1);
+  }
+
+  &::after {
+    display: block;
+    position: absolute 0;
+    transform: scale(0);
+    transition: transform 0.35s ease-out-back;
+    border-radius: 50%;
+    background: rgba(224, 224, 224, 0.4);
+    content: "";
+  }
+}
+
+.hr {
+  position: absolute null var(--spacer-md) -var(--spacer-sm) var(--spacer);
+  transform: translateX(-120%);
+  border-top: none;
+  border-bottom: 1px solid var(--accent-color);
+
+  &.slideIn {
+    animation: slideIn 225ms ease-in-quart forwards;
+  }
+
+  &.slideOut {
+    animation: slideOut 225ms ease-in-quart forwards;
+  }
+}
+
+.body {
+  padding: 16px;
+
+  & ul {
+    padding: 0 0 var(--spacer-md) var(--spacer-md);
+    list-style-type: circle;
+  }
+
+  & li {
+    padding-bottom: var(--spacer-sm);
+  }
+
+  & p {
+    padding-left: var(--spacer-sm);
+    color: var(--secondary-text);
+    font-size: var(--text-md);
+
+    &::first-letter {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.onEnter {
+  transform-origin: 0 0;
+}

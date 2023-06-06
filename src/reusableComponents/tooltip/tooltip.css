@@ -1,0 +1,19 @@
+@import "../../../styles/base/_settings.css";
+@import "../../../styles/utils/_helpers.css";
+
+.root {
+  position: relative;
+  cursor: pointer;
+}
+
+.hiddenText {
+  position: fixed;
+  z-index: 99;
+  border-radius: 2px;
+  background: color(var(--grey-darken) shade(20%) a(0.9));
+  padding: 0.4em;
+  max-width: 250px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}

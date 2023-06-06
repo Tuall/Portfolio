@@ -1,0 +1,13 @@
+@import "../../../styles/base/_settings.css";
+
+.root {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  padding: 0 var(--spacer);
+  width: 100%;
+  max-width: 1024px;
+
+  @media (--above-mobile) {
+    padding: 0 var(--spacer-lg);
+  }
+}

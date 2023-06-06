@@ -1,0 +1,54 @@
+:root {
+  /* sweeping effect on hover */
+  --link-sweep: {
+    position: relative;
+    color: var(--accent-color);
+    transform: translateZ(0); /* trick to smooth out the animation */
+    transition: all 0.2s ease-out-quint;
+
+    @apply --link;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      background-color: var(--accent-color);
+      transform: scaleY(0);
+      transform-origin: center bottom;
+    }
+
+    &:hover {
+      color: #fff;
+      text-shadow: 1px 1px 0 var(--accent-color); /* to prevent the text from being invisible in certain cases on touch devices */
+      &::before {
+        position: absolute 0;
+        transform: scaleY(1);
+        transition: inherit;
+      }
+    }
+  }
+
+  /* Underline From Left (ported from Hover.css) */
+  --underline-left: {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      position: absolute null 100% -10px 0;
+      height: 4px;
+      margin-top: 12px;
+      background: var(--accent-color);
+      transition: right 0.2s ease-out-sine;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "_helpers.css";
+
+/* Matching helper classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:global .u-block {
+  @apply --block;
+}
+
+:global .u-boxShadow {
+  @apply --box-shadow;
+}
+
+:global .u-highlight {
+  @apply --highlight;
+}
+
+:global .u-link {
+  @apply --link;
+}
+
+:global .u-underline {
+  @apply --underline;
+}
+
+:global .u-noscroll {
+  @apply --no-scroll;
+}
+
+:global .u-center-y {
+  @apply --center-y;
+}
+
+:global .u-center-xy {
+  @apply --center-xy;
+}

@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: #bdbdbd;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input:not([type=checkbox]):not([type=radio]) {
+  -webkit-appearance: none;
+}
+
+input[type=search] {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+  padding: 8px 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #bdbdbd;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent-color);
+    box-shadow: 0 1px 0 0 var(--accent-color);
+  }
+}
+
+textarea {
+  max-width: 100%;
+  border-top: 1px solid #bdbdbd;
+
+  &:focus {
+    border-top: 1px solid var(--accent-color);
+    box-shadow:
+      0 -1px 0 0 var(--accent-color),
+      0 1px 0 0 var(--accent-color);
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* FF hack, to prevent a sub-pixel rendering issue */
+@-moz-document url-prefix() {
+  select {
+    padding: 0.4Em;
+  }
+}
+
+::placeholder {
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}

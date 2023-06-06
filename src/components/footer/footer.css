@@ -1,0 +1,51 @@
+@import "../../../styles/base/_settings.css";
+
+.root {
+  flex: none;
+  margin-top: var(--spacer-lg);
+  text-align: center;
+  color: #fff;
+}
+
+.body {
+  padding: var(--spacer-lg) 0;
+  letter-spacing: 2px;
+  font-size: var(--text-md);
+
+  &:hover {
+    & .heart {
+      &:global {
+        animation: beatingHeartStronger 0.95s cubic-bezier(0.9, -5.9, 0.9, 5.9) infinite;
+      }
+    }
+  }
+}
+
+.icons {
+  box: horizontal-middle center wrap;
+  margin-top: var(--spacer-sm);
+}
+
+.text {
+  margin-top: var(--spacer);
+}
+
+.overlay {
+  background: color(var(--primary-color) shade(20%));
+  padding: var(--spacer-sm) var(--spacer-lg);
+}
+
+/* Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.heart {
+  &:global {
+    transform: translateZ(0); /* trick to smooth out the animation */
+    animation: beatingHeart 1s cubic-bezier(0.9, -0.9, 0.9, 0.9) infinite;
+  }
+}
+
+.music {
+  vertical-align: middle;
+}
+

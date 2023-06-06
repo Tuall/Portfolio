@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-concentric-order",
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "property-no-unknown": [
+      true, { "ignoreProperties": ["box"] }
+    ],
+    "selector-type-no-unknown": [
+      true, { "ignoreTypes": ["/^component$/"] }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { "ignorePseudoClasses": ["global", "local"] }
+    ]
+  }
+}

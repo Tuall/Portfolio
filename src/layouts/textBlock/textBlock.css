@@ -1,0 +1,26 @@
+@import "../../../styles/base/_settings.css";
+
+.root {
+  position: relative;
+  margin: var(--spacer-sm) 0 0 var(--spacer-sm);
+  max-width: 700px;
+  font-size: var(--text-lg);
+}
+
+.background {
+  @media (--above-tablet) {
+    padding-right: 1.5em;
+
+    &::after {
+      display: block;
+      position: absolute 0 null 0 100%;
+      background: svg-load("images/arrow.svg") 10px center/contain no-repeat;
+      width: 72px;
+      content: "";
+
+      &:global {
+        animation: landing 1.4s ease-out-back 0.7s both;
+      }
+    }
+  }
+}

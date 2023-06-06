@@ -1,0 +1,51 @@
+@import "../../../styles/base/_settings.css";
+@import "../../../styles/utils/_helpers.css";
+
+.root {
+  position: relative;
+  padding: var(--spacer-lg) 0 var(--spacer-xl) var(--spacer);
+  overflow: hidden;
+}
+
+.heading {
+  transform-style: preserve-3d;
+  margin-bottom: 0;
+  background-color: inherit;
+  color: var(--accent-color);
+  box: horizontal-middle wrap;
+
+  &::after {
+    display: inline-block;
+    background: var(--grey);
+    width: 100%;
+    height: 5px;
+    content: "";
+
+    @apply --center-y;
+  }
+}
+
+.icon {
+  position: relative;
+  z-index: 3;  /* EDGE hack, to hide the :after content from the header text, 1/3 */
+  background-color: inherit;
+  max-width: 15%;
+
+  &::after {
+    display: block;
+    border: 5px solid var(--grey);
+    border-radius: 50%;
+    padding: 18px;
+    content: "";
+
+    @apply --center-xy;
+  }
+}
+
+.text {
+  position: relative; /* EDGE hack, 3/3 */
+  z-index: 2; /* EDGE hack, 2/3 */
+  background-color: inherit;
+  padding: 0 var(--spacer-md);
+  max-width: 85%;
+}

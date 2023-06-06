@@ -1,0 +1,2 @@
+@custom-selector :--states :hover, :focus, :active, :visited;
+@custom-selector :--link-color a, :link, :visited;

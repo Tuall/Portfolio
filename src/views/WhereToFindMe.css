@@ -1,0 +1,25 @@
+@import "../../styles/base/_settings.css";
+@import "../../styles/utils/_custom-selectors.css";
+
+.email {
+  margin: var(--spacer) 0;
+  font-family: var(--headings-font-family);
+  font-size: var(--text-xl);
+
+  &:--link-color {
+    color: var(--accent-color);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > a {
+    margin-bottom: 0;
+
+    &:not(:last-of-type) {
+      margin-right: var(--spacer);
+    }
+  }
+}

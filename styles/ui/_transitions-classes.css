@@ -1,0 +1,11 @@
+@import "_transitions.css";
+
+/* Matching transitions classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:global .u-linkSweep {
+  @apply --link-sweep;
+}
+
+:global .u-underlineLeft {
+  @apply --underline-left;
+}

@@ -1,0 +1,17 @@
+@import "../../styles/base/_settings.css";
+
+.filters {
+  box: horizontal-middle left wrap;
+  margin: 0 0 var(--spacer-xl) var(--spacer-sm);
+  color: var(--grey-darken);
+
+  & span {
+    flex-basis: 100%;
+    margin: 0 0 var(--spacer-sm);
+
+    @media (--above-mobile) {
+      flex-basis: auto;
+      margin: 0 var(--spacer-sm) 0 0;
+    }
+  }
+}
